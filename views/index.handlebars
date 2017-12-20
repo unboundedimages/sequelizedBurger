@@ -1,0 +1,91 @@
+{{!--this page is where I can do all my serious html with handlebars and feeds the html--}}
+
+
+{{!--<form action="/index" method="POST">--}}
+{{!--    <ul>--}}
+{{!--        {{#each burger}}--}}
+{{!--            hello--}}
+
+{{!--        {{/each}}--}}
+{{!--    </ul>--}}
+{{!--    <input type="" name="">--}}
+{{!--    <input type="submit" value="">--}}
+{{!--</form>--}}
+
+{{!--<div id="newBurgers">--}}
+
+
+
+
+{{!--</div>--}}
+<div class="rooster">
+    <img src="/assets/img/chicken.png" alt="burger">
+</div>
+
+<div id="title">
+    <h2>Eat MORE BeRGER!</h2>
+</div>
+
+
+<form class="create-form" action="burgers/create" method="POST">
+    <div class="form-group">
+        {{!--<label for="burger-input">Burger Name:</label>--}}
+        {{!--<input type="text" id="beef" name="name">--}}
+    </div>
+    {{!--<button type="submit">Add BURGER</button>--}}
+</form>
+
+
+<div id="burgers-appear-hear">
+    {{!--burger/insertOne is pulling from line 25 on the burgers_controller.js--}}
+    <form action="burger/insertOne" method="POST" align="center">
+
+        <!-- Text Area Input -->
+        <div class="row">
+            <!-- Empty Div to help center textarea -->
+            <div class="col-md-3"></div>
+
+            <!-- Burger Input Box -->
+            <div class="form-group col-md-6">
+                <center><label for="new_burger">Name your burger:</label></center>
+                <textarea class="form-control" columns="8" rows="4" id="new_burger" name="burger_name"></textarea>
+            </div>
+
+            <!-- Empty Div to help center textarea -->
+            <div class="col-md-3"></div>
+        </div>
+
+        <!-- Submit Button -->
+        <center>
+            <button id="submit-button" type="submit" class="btn btn-danger">Eat more BEEF!</button>
+        </center>
+
+    </form>
+    {{#each text}}
+        {{#unless this.complete}}
+            {{!--burger/updateOne is pulled from line 37 on the burgers_controller.js file in controllers--}}
+            <form action="burger/updateOne/{{id}}" method="GET">
+                <div class="input-group">
+                    <li class="form-control">{{this.id}}. {{this.text}}</li>
+                    <span class="input-group-btn">
+                  <button class="btn btn-success devour-button" type="submit">Devour It!</button>
+                </span>
+                </div>
+            </form>
+        {{/unless}}
+    {{/each}}
+
+    <br>
+    {{#each text}}
+        {{#if this.complete}}
+            <form action="burger/updateOne/{{id}}" method="GET">
+                <div class="input-group">
+                    <li class="form-control">{{this.id}}. {{this.text}}</li>
+                    <span class="input-group-btn">
+                  <button class="btn btn-success devour-button" type="submit">Devour It!</button>
+                </span>
+                </div>
+            </form>
+        {{/if}}
+    {{/each}}
+</div>

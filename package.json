@@ -1,0 +1,43 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "node express mysql handlebars app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unboundedimages/burger.git"
+  },
+  "keywords": [
+    "nodejs",
+    "node",
+    "js",
+    "express",
+    "mysql",
+    "handlebars",
+    "eat",
+    "the",
+    "burger"
+  ],
+  "author": "Rodney R",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unboundedimages/burger/issues"
+  },
+  "homepage": "https://github.com/unboundedimages/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "handlebar": "^1.0.0",
+    "inquirer": "^4.0.1",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.1",
+    "path": "^0.12.7",
+    "require": "^2.4.20",
+    "sequelize": "^4.28.6"
+  }
+}

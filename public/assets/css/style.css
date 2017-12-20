@@ -1,0 +1,51 @@
+body {
+    height: 720px;
+    width: auto;
+    background: #07bafe;
+    /* For browsers that do not support gradients */
+    background: radial-gradient(yellow, #07bafe);
+    /* Standard syntax (must be last) */
+}
+
+
+img {
+    display: block;
+    margin: auto;
+    height: 325px;
+}
+
+/*.rooster:hover {
+    */
+
+/*    transform: rotate(360deg);*/
+
+/*    transition: width 2s, height 2s, transform 2s;*/
+
+/*}*/
+
+#title {
+    text-align: center;
+    margin: auto;
+    height: 40px;
+}
+
+.btn-danger {
+    color: #333;
+    background-color: #15bef4;
+    border-color: #0559758f;
+}
+
+.btn-danger:hover {
+    background-color: #3dc8d3;
+    /*background-color: #4CAF50;*/
+    color: #d6f32a;
+    border-color: #18806e;
+}
+
+.form-control {
+    background-color: #dcf415;
+    margin: auto;
+    max-width: 320px;
+}
+
+.class {}
